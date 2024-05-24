@@ -22,12 +22,12 @@
   document.addEventListener("DOMContentLoaded", () => {
     const shareButton = document.getElementById("shareButton");
 
-    shareButton.addEventListener("click", () => {
+    shareButton!.addEventListener("click", () => {
       navigator.clipboard.writeText(window.location.href).then(() => {
-        shareButton.textContent = copiedText;
+        shareButton!.textContent = copiedText;
 
         setTimeout(() => {
-          shareButton.textContent = defaultText;
+          shareButton!.textContent = defaultText;
         }, 1200); // Reset after 2 seconds
       });
     });
