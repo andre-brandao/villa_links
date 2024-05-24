@@ -1,0 +1,31 @@
+---
+// lib/LinkButton.astro
+const { href, highlight } = Astro.props;
+---
+
+<a target="_blank" href={href} class={`link-button ${highlight ? 'highlight' : ''} w-full text-center py-4`}>
+  <slot />
+</a>
+
+<style>
+  .link-button {
+    text-decoration: none;
+    color: white;
+    background-color: #2C2E5E; /* Dark background color */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .link-button:hover {
+    background-color: #555;
+  }
+
+  .highlight {
+    background-color: #F1AF39; /* Highlight background color */
+    color: black;
+}
+
+  .highlight:hover {
+    background-color:#3C3E7E;
+  }
+</style>
