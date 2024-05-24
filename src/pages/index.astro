@@ -7,52 +7,46 @@ import ShareButton from "../lib/ShareButton.astro";
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <meta name="description" content="Villa Rica Pousada Boutique - Acomodações de luxo em um ambiente tranquilo e encantador. Faça sua reserva agora!" />
+    <meta name="keywords" content="Villa Rica, pousada, boutique, acomodações, reservas, luxo, tranquilidade, brumadinho, inhotim, turismo" />
+    <meta property="og:title" content="Villa Rica Informações" />
+    <meta property="og:description" content="Villa Rica Pousada Boutique - Acomodações de luxo em um brumadinho, próximo ao inhotim. Faça sua reserva agora!" />
+    <meta property="og:image" content="/background.jpeg" />
+    <meta property="og:url" content="https://www.villaricapousada.com.br" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Villa Rica Informações</title>
     <style>
       .background {
         background-image: url("/background.jpeg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        background-attachment: fixed; /* Optional: Makes the background fixed when scrolling */
+        background-attachment: fixed;
         flex: 1;
       }
     </style>
   </head>
   <body class="flex flex-col min-h-screen">
-    <header
-      class="flex items-center justify-center py-8 bg-opacity-80 w-full fixed top-0 z-10"
-    >
-      <img
-        src="/logo.png"
-        alt="Villa Rica Pousada Boutique"
-        height="100"
-        width="100"
-      />
+    <header class="flex items-center justify-center py-8 bg-opacity-80 w-full fixed top-0 z-10">
+      <img src="/logo.png" alt="Villa Rica Pousada Boutique Logo" height="100" width="100" />
     </header>
 
-    <div
-      class="background flex flex-col items-center justify-end gap-4 w-full p-4"
-    >
+    <main class="background flex flex-col items-center justify-end gap-4 w-full p-4">
       <div class="flex flex-col gap-4 max-md:w-full w-1/2">
-        <LinkButton
-          href={`https://wa.me/5531983861852?text=${encodeURIComponent("Mensagem Padrao Pro WhatsApp")}`}
-          highlight={true}
-        >
+        <LinkButton href={`https://wa.me/5531983861852?text=${encodeURIComponent("Mensagem Padrao Pro WhatsApp")}`} highlight={true}>
           WhatsApp
         </LinkButton>
         <LinkButton href="https://www.villaricapousada.com.br/br/reserva">
           Site Reservas
         </LinkButton>
-        <LinkButton href="https://cafedavilla.umenu.app/cliente/cardapio"> Cardapio</LinkButton>
+        <LinkButton href="https://cafedavilla.umenu.app/cliente/cardapio">Cardápio</LinkButton>
         <LinkButton href="https://www.villaricapousada.com.br/br/a-pousada">
           Fotos
         </LinkButton>
-
         <ShareButton />
       </div>
-    </div>
+    </main>
   </body>
 </html>
