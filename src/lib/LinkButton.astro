@@ -3,7 +3,7 @@
 const { href, highlight } = Astro.props;
 ---
 
-<a target="_blank" href={href} class={`link-button ${highlight ? 'highlight' : ''} w-full text-center py-4`}>
+<a target="_blank" href={href} class={`link-button ${highlight ? 'highlight' : ''} w-full text-center py-4 plausible-event-name=${encodeURI(href)}`}>
   <slot />
 </a>
 
